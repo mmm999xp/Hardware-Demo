@@ -9,15 +9,15 @@ const router = useRouter()
 
 const banners = [
   {
-    image: '/cd37d069-65d4-4cf2-9e85-e6c51b67c09e.jpg',
+    image: import.meta.env.BASE_URL + '/cd37d069-65d4-4cf2-9e85-e6c51b67c09e.jpg',
     alt: 'banner 1',
   },
   {
-    image: '/2420f0bb-e462-4860-8a43-0b547a35789d.jpg',
+    image: import.meta.env.BASE_URL + '/2420f0bb-e462-4860-8a43-0b547a35789d.jpg',
     alt: 'banner 2',
   },
   {
-    image: '/acb09497-f081-4f26-8793-b4fa4f17ff86.jpg',
+    image: import.meta.env.BASE_URL + '/acb09497-f081-4f26-8793-b4fa4f17ff86.jpg',
     alt: 'banner 3',
   },
 ]
@@ -26,33 +26,33 @@ const products = [
   {
     name: '商品 1',
     code: 'MB-160',
-    image: '/andrey-matveev-cQ8wkdZybZc-unsplash.jpg',
+    image: import.meta.env.BASE_URL + '/andrey-matveev-cQ8wkdZybZc-unsplash.jpg',
     highlight: true,
   },
   {
     name: '商品 2',
     code: 'CF-116C',
-    image: '/andrey-matveev-vWc2sTyS6sI-unsplash.jpg',
+    image: import.meta.env.BASE_URL + '/andrey-matveev-vWc2sTyS6sI-unsplash.jpg',
   },
   {
     name: '商品 3',
     code: 'RM-24018',
-    image: '/andrey-matveev-EKLLxyt-QRE-unsplash.jpg',
+    image: import.meta.env.BASE_URL + '/andrey-matveev-EKLLxyt-QRE-unsplash.jpg',
   },
   {
     name: '商品 4',
     code: 'TK-084',
-    image: '/andrey-matveev-iIY-AjQgXsw-unsplash.jpg',
+    image: import.meta.env.BASE_URL + '/andrey-matveev-iIY-AjQgXsw-unsplash.jpg',
   },
   {
     name: '商品 5',
     code: 'CPU-125',
-    image: '/andrey-matveev-TZ1iky_p1sc-unsplash.jpg',
+    image: import.meta.env.BASE_URL + '/andrey-matveev-TZ1iky_p1sc-unsplash.jpg',
   },
   {
     name: '商品 6',
     code: 'HK-220',
-    image: '/fer-troulik-BILCmJlSHmk-unsplash.jpg',
+    image: import.meta.env.BASE_URL + '/fer-troulik-BILCmJlSHmk-unsplash.jpg',
   },
 ]
 
@@ -64,7 +64,7 @@ const auctions = [
     currentPrice: 12600,
     bidderCount: 12,
     interestedCount: 38,
-    image: '/fer-troulik-BILCmJlSHmk-unsplash.jpg',
+    image: import.meta.env.BASE_URL + '/fer-troulik-BILCmJlSHmk-unsplash.jpg',
   },
   {
     title: '拍賣 2',
@@ -73,7 +73,7 @@ const auctions = [
     currentPrice: 3200,
     bidderCount: 8,
     interestedCount: 24,
-    image: '/andrey-matveev-vWc2sTyS6sI-unsplash.jpg',
+    image: import.meta.env.BASE_URL + '/andrey-matveev-vWc2sTyS6sI-unsplash.jpg',
   },
   {
     title: '拍賣 3',
@@ -82,7 +82,7 @@ const auctions = [
     currentPrice: 2100,
     bidderCount: 5,
     interestedCount: 17,
-    image: '/andrey-matveev-pfKnGfJrrjI-unsplash.jpg',
+    image: import.meta.env.BASE_URL + '/andrey-matveev-pfKnGfJrrjI-unsplash.jpg',
   },
   {
     title: '拍賣 4',
@@ -91,7 +91,7 @@ const auctions = [
     currentPrice: 8800,
     bidderCount: 15,
     interestedCount: 41,
-    image: '/kc-shum-KkaLqA-5XII-unsplash.jpg',
+    image: import.meta.env.BASE_URL + '/kc-shum-KkaLqA-5XII-unsplash.jpg',
   },
 ]
 </script>
