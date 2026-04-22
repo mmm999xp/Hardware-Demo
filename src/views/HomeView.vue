@@ -112,7 +112,6 @@ const auctions = [
         <h2 class="text-2xl font-bold">猜你喜歡</h2>
         <a
           class="inline-block rounded bg-zec-green px-3 py-1 text-base font-bold text-black hover:bg-zec-darkgreen"
-          href="/"
         >
           更多
         </a>
@@ -134,7 +133,6 @@ const auctions = [
         <h2 class="text-2xl font-bold">熱門競標</h2>
         <a
           class="inline-block rounded bg-zec-green px-3 py-1 text-base font-bold text-black hover:bg-zec-darkgreen"
-          href="/"
         >
           更多
         </a>
