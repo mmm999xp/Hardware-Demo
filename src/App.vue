@@ -1,7 +1,13 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import { useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 const router = useRouter()
+import { computed } from 'vue'
+import Demo from '@/views/demo.vue'
+
+const route = useRoute()
+
+const isDemoMode = computed(() => route.query.page === 'demo')
 </script>
 
 <template>
@@ -19,8 +25,12 @@ const router = useRouter()
         </div>
       </div>
     </nav>
-
-    <RouterView />
+    <template v-if="isDemoMode">
+      <Demo />
+    </template>
+    <template v-else>
+      <RouterView />
+    </template>
   </div>
 </template>
 
