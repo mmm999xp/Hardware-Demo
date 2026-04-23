@@ -94,6 +94,68 @@ const auctions = [
     image: import.meta.env.BASE_URL + '/kc-shum-KkaLqA-5XII-unsplash.jpg',
   },
 ]
+const categories = [
+  {
+    key: 'hand-tools',
+    name: '手工具',
+    icon: import.meta.env.BASE_URL + '/category' +  '/01.png',
+  },
+  {
+    key: 'power-tools',
+    name: '電動工具',
+    icon: import.meta.env.BASE_URL + '/category' + '/02.png',
+  },
+  {
+    key: 'measuring-tools',
+    name: '測量工具',
+    icon: import.meta.env.BASE_URL + '/category' + '/03.png',
+  },
+  {
+    key: 'fasteners',
+    name: '螺絲扣件',
+    icon: import.meta.env.BASE_URL + '/category' + '/04.png',
+  },
+  {
+    key: 'door-window-hardware',
+    name: '門窗五金',
+    icon: import.meta.env.BASE_URL + '/category' + '/05.png',
+  },
+  {
+    key: 'plumbing-electrical',
+    name: '水電材料',
+    icon: import.meta.env.BASE_URL + '/category' + '/06.png',
+  },
+  {
+    key: 'adhesive-sealant',
+    name: '黏著密封',
+    icon: import.meta.env.BASE_URL + '/category' + '/07.png',
+  },
+  {
+    key: 'paint-repair',
+    name: '油漆修繕',
+    icon: import.meta.env.BASE_URL + '/category' + '/08.png',
+  },
+  {
+    key: 'safety-protection',
+    name: '安全防護',
+    icon: import.meta.env.BASE_URL + '/category' + '/09.png',
+  },
+  {
+    key: 'garden-outdoor',
+    name: '園藝戶外',
+    icon: import.meta.env.BASE_URL + '/category' + '/10.png',
+  },
+  {
+    key: 'storage-transport',
+    name: '收納搬運',
+    icon: import.meta.env.BASE_URL + '/category' + '/11.png',
+  },
+  {
+    key: 'industrial-consumables',
+    name: '工業耗材',
+    icon: import.meta.env.BASE_URL + '/category' + '/12.png',
+  },
+]
 </script>
 
 <template>
@@ -106,8 +168,35 @@ const auctions = [
         class="carousel"
       />
     </div>
+    <div class="mx-auto max-w-245 px-4 py-6">
 
-    <div class="mx-auto max-w-[980px] px-4 py-6">
+      <div class="mb-4 flex items-center justify-between p-4 lg:px-0">
+        <h2 class="text-2xl font-bold">五金分類</h2>
+        <a
+          class="inline-block rounded bg-zec-green px-3 py-1 text-base font-bold text-black hover:bg-zec-darkgreen"
+        >
+          更多
+        </a>
+      </div>
+      <section class="grid grid-cols-3 gap-y-8 gap-x-4 py-6 sm:grid-cols-4 lg:grid-cols-6">
+        <div
+          v-for="category in categories"
+          :key="category.key"
+          class="flex cursor-pointer flex-col items-center"
+        >
+          <img
+            :src="category.icon"
+            :alt="category.name"
+            class="h-24 w-24 object-contain sm:h-20 sm:w-20 lg:h-22 lg:w-22"
+          >
+          <p class="mt-3 text-center text-sm text-zinc-800 sm:text-base">
+            {{ category.name }}
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <div class="mx-auto max-w-245 px-4 py-6">
       <div class="mb-4 flex items-center justify-between p-4 lg:px-0">
         <h2 class="text-2xl font-bold">猜你喜歡</h2>
         <a
@@ -128,7 +217,7 @@ const auctions = [
       </div>
     </div>
 
-    <div class="mx-auto max-w-[980px] px-4 py-6">
+    <div class="mx-auto max-w-245 px-4 py-6">
       <div class="mb-4 flex items-center justify-between p-4 lg:px-0">
         <h2 class="text-2xl font-bold">熱門競標</h2>
         <a
